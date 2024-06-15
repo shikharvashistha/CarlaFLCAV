@@ -59,17 +59,7 @@ python3 flcav_yolo.py -w 4096 -l 4096 --batch_size 4 --epoch 10 --pretrain_model
 ```
 
 ## Acknowledgement
-
-* [CARLA](https://github.com/carla-simulator)
 * [Yolov5](https://github.com/ultralytics/yolov5)
 
-## Citation
-
-```tex
-@article{FLCAV,
-  title={Federated deep learning meets autonomous vehicle perception: Design and verification},
-  author={Shuai Wang and Chengyang Li and Derrick Wing Kwan Ng and Yonina C. Eldar and H. Vincent Poor and Qi Hao and Chengzhong Xu},
-  journal={IEEE Network},
-  year={2022}
 }
 ```
