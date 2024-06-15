@@ -60,5 +60,3 @@ python3 flcav_yolo.py -w 4096 -l 4096 --batch_size 4 --epoch 10 --pretrain_model
 
 ## Acknowledgement
 * [Yolov5](https://github.com/ultralytics/yolov5)
-}
-```
