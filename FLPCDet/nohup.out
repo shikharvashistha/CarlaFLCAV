@@ -1,0 +1,98 @@
+running develop
+running egg_info
+writing pcdet.egg-info/PKG-INFO
+writing dependency_links to pcdet.egg-info/dependency_links.txt
+writing requirements to pcdet.egg-info/requires.txt
+writing top-level names to pcdet.egg-info/top_level.txt
+reading manifest file 'pcdet.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file 'pcdet.egg-info/SOURCES.txt'
+running build_ext
+building 'pcdet.ops.iou3d_nms.iou3d_nms_cuda' extension
+/home/user/miniconda3/envs/drl/lib/python3.8/site-packages/setuptools/dist.py:314: InformationOnly: Normalizing '0.5.2+0000000' to '0.5.2+0'
+  self.metadata.version = self._normalize_version(
+/home/user/miniconda3/envs/drl/lib/python3.8/site-packages/setuptools/command/develop.py:40: EasyInstallDeprecationWarning: easy_install command is deprecated.
+!!
+
+        ********************************************************************************
+        Please avoid running ``setup.py`` and ``easy_install``.
+        Instead, use pypa/build, pypa/installer or other
+        standards-based tools.
+
+        See https://github.com/pypa/setuptools/issues/917 for details.
+        ********************************************************************************
+
+!!
+  easy_install.initialize_options(self)
+/home/user/miniconda3/envs/drl/lib/python3.8/site-packages/setuptools/_distutils/cmd.py:66: SetuptoolsDeprecationWarning: setup.py install is deprecated.
+!!
+
+        ********************************************************************************
+        Please avoid running ``setup.py`` directly.
+        Instead, use pypa/build, pypa/installer or other
+        standards-based tools.
+
+        See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details.
+        ********************************************************************************
+
+!!
+  self.initialize_options()
+Emitting ninja build file /home/user/Desktop/shikharvashistha/CarlaFLCAV/FLPCDet/build/temp.linux-x86_64-cpython-38/build.ninja...
+Compiling objects...
+Allowing ninja to set a default number of workers... (overridable by setting the environment variable MAX_JOBS=N)
+ninja: build stopped: interrupted by user.
+Traceback (most recent call last):
+  File "/home/user/miniconda3/envs/drl/lib/python3.8/site-packages/torch/utils/cpp_extension.py", line 1900, in _run_ninja_build
+    subprocess.run(
+  File "/home/user/miniconda3/envs/drl/lib/python3.8/subprocess.py", line 516, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['ninja', '-v']' returned non-zero exit status 2.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "setup.py", line 34, in <module>
+    setup(
+  File "/home/user/miniconda3/envs/drl/lib/python3.8/site-packages/setuptools/__init__.py", line 103, in setup
+    return distutils.core.setup(**attrs)
+  File "/home/user/miniconda3/envs/drl/lib/python3.8/site-packages/setuptools/_distutils/core.py", line 185, in setup
+    return run_commands(dist)
+  File "/home/user/miniconda3/envs/drl/lib/python3.8/site-packages/setuptools/_distutils/core.py", line 201, in run_commands
+    dist.run_commands()
+  File "/home/user/miniconda3/envs/drl/lib/python3.8/site-packages/setuptools/_distutils/dist.py", line 969, in run_commands
+    self.run_command(cmd)
+  File "/home/user/miniconda3/envs/drl/lib/python3.8/site-packages/setuptools/dist.py", line 989, in run_command
+    super().run_command(command)
+  File "/home/user/miniconda3/envs/drl/lib/python3.8/site-packages/setuptools/_distutils/dist.py", line 988, in run_command
+    cmd_obj.run()
+  File "/home/user/miniconda3/envs/drl/lib/python3.8/site-packages/setuptools/command/develop.py", line 34, in run
+    self.install_for_development()
+  File "/home/user/miniconda3/envs/drl/lib/python3.8/site-packages/setuptools/command/develop.py", line 109, in install_for_development
+    self.run_command('build_ext')
+  File "/home/user/miniconda3/envs/drl/lib/python3.8/site-packages/setuptools/_distutils/cmd.py", line 318, in run_command
+    self.distribution.run_command(command)
+  File "/home/user/miniconda3/envs/drl/lib/python3.8/site-packages/setuptools/dist.py", line 989, in run_command
+    super().run_command(command)
+  File "/home/user/miniconda3/envs/drl/lib/python3.8/site-packages/setuptools/_distutils/dist.py", line 988, in run_command
+    cmd_obj.run()
+  File "/home/user/miniconda3/envs/drl/lib/python3.8/site-packages/setuptools/command/build_ext.py", line 88, in run
+    _build_ext.run(self)
+  File "/home/user/miniconda3/envs/drl/lib/python3.8/site-packages/setuptools/_distutils/command/build_ext.py", line 345, in run
+    self.build_extensions()
+  File "/home/user/miniconda3/envs/drl/lib/python3.8/site-packages/torch/utils/cpp_extension.py", line 843, in build_extensions
+    build_ext.build_extensions(self)
+  File "/home/user/miniconda3/envs/drl/lib/python3.8/site-packages/setuptools/_distutils/command/build_ext.py", line 467, in build_extensions
+    self._build_extensions_serial()
+  File "/home/user/miniconda3/envs/drl/lib/python3.8/site-packages/setuptools/_distutils/command/build_ext.py", line 493, in _build_extensions_serial
+    self.build_extension(ext)
+  File "/home/user/miniconda3/envs/drl/lib/python3.8/site-packages/setuptools/command/build_ext.py", line 249, in build_extension
+    _build_ext.build_extension(self, ext)
+  File "/home/user/miniconda3/envs/drl/lib/python3.8/site-packages/setuptools/_distutils/command/build_ext.py", line 548, in build_extension
+    objects = self.compiler.compile(
+  File "/home/user/miniconda3/envs/drl/lib/python3.8/site-packages/torch/utils/cpp_extension.py", line 658, in unix_wrap_ninja_compile
+    _write_ninja_file_and_compile_objects(
+  File "/home/user/miniconda3/envs/drl/lib/python3.8/site-packages/torch/utils/cpp_extension.py", line 1573, in _write_ninja_file_and_compile_objects
+    _run_ninja_build(
+  File "/home/user/miniconda3/envs/drl/lib/python3.8/site-packages/torch/utils/cpp_extension.py", line 1916, in _run_ninja_build
+    raise RuntimeError(message) from e
+RuntimeError: Error compiling objects for extension

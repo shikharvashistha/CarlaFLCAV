@@ -437,7 +437,7 @@ class KittiDataset(DatasetTemplate):
 def create_kitti_infos(dataset_cfg, class_names, data_path, save_path, workers=4):
     dataset = KittiDataset(dataset_cfg=dataset_cfg, class_names=class_names, root_path=data_path, training=False)
 
-    print(dataset)
+    print(save_path)
     train_split, val_split = 'train', 'val'
 
     train_filename = save_path / ('kitti_infos_%s.pkl' % train_split)

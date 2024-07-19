@@ -1,6 +1,6 @@
 weights: yolov5s.pt
 cfg: yolov5/models/yolov5s.yaml
-data: raw_data/record2022_0419_0241/vehicle.tesla.model3_969//yolo_coco_carla.yaml
+data: raw_data/record2022_0419_0241/vehicle.tesla.model3_969/yolo_coco_carla.yaml
 hyp: yolov5/data/hyps/hyp.scratch.yaml
 epochs: 50
 batch_size: 8
@@ -35,5 +35,5 @@ upload_dataset: false
 bbox_interval: -1
 artifact_alias: latest
 save: ''
-spsz: 50
+spsz: 1000
 save_dir: yolov5/runs/train/exp47

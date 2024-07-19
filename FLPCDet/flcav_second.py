@@ -43,7 +43,9 @@ class FLCAV_SECOND:
             # finish one experiment
             print('---------------------------------Number of samples %r is completed.'%s)
 
-        foldername = './output//kitti_models/pretrain/vehicle_train/default/ckpt/'
+        foldername = './output/kitti_models/pretrain/vehicle_train/default/ckpt/'
+        if not os.path.exists(foldername):
+            os.makedirs(foldername)
         filename = 'pretrained_model_' + str(s) +'.pth'
 
         model_dict0 = torch.load(foldername+filename)
@@ -234,6 +236,3 @@ def main():
 if __name__ == "__main__":
     # execute only if run as a script
     main()
-
-
-    

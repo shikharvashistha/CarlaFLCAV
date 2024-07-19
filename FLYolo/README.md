@@ -7,7 +7,10 @@ pip3 install opencv-python
 pip3 install -r yolov5/requirements.txt
 pip install cvxpy
 ```
+<!-- comparision for multiple paper, yolo multiple version, scenarios - where framework fails 
+carla, base, one more
 
+-->
 ## Example RawData Folder Structure 
 
 ```

@@ -70,7 +70,7 @@ class Resource_Allocator:
         # The multi-modal multi-stage joint optimization
         prob = cp.Problem(objective, constraints)
         # The optimal objective value is returned by `prob.solve()`.
-        result = prob.solve()
+        result = prob.solve(solver=cp.ECOS, verbose=True)
         # The optimal value for x is stored in `x.value`.
         print('The number of samples are:')
         print(x.value)

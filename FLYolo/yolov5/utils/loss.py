@@ -165,7 +165,7 @@ class ComputeLoss:
         bs = tobj.shape[0]  # batch size
 
         return (lbox + lobj + lcls) * bs, torch.cat((lbox, lobj, lcls)).detach()
-
+# nohup python3 yolov5/train.py --img 640 --batch 8 --epochs 5 --data raw_data/pretrain/vehicle.tesla.model3_143/yolo_coco_carla.yaml --cfg yolov5/models/yolov5s.yaml  --weights yolov5s.pt &
     def build_targets(self, p, targets):
         # Build targets for compute_loss(), input targets(image,class,x,y,w,h)
         na, nt = self.na, targets.shape[0]  # number of anchors, targets
@@ -181,7 +181,7 @@ class ComputeLoss:
                             ], device=targets.device).float() * g  # offsets
 
         for i in range(self.nl):
-            anchors = self.anchors[i]
+            anchors, shape = self.anchors[i], p[i].shape
             gain[2:6] = torch.tensor(p[i].shape)[[3, 2, 3, 2]]  # xyxy gain
 
             # Match targets to anchors
@@ -214,7 +214,7 @@ class ComputeLoss:
 
             # Append
             a = t[:, 6].long()  # anchor indices
-            indices.append((b, a, gj.clamp_(0, gain[3] - 1), gi.clamp_(0, gain[2] - 1)))  # image, anchor, grid indices
+            indices.append((b, a, gj.clamp_(0, shape[2] - 1), gi.clamp_(0, shape[3] - 1)))  # image, anchor, grid indices
             tbox.append(torch.cat((gxy - gij, gwh), 1))  # box
             anch.append(anchors[a])  # anchors
             tcls.append(c)  # class
